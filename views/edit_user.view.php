@@ -1,5 +1,4 @@
 <?php $title = 'Edition de profil'?>
-<!-- <?php include('constants/constants.php')?> -->
 <?php include('partials/_header.php')?>
 
 <!-- Begin page content -->
@@ -8,7 +7,7 @@
     <div class="row justify-content-around">
 
             <?php
-                if(!empty($_GET['id']) && $_GET['id'] === get_session('user_id')) : 
+                if(!empty($_GET['id']) && $_GET['id'] === get_session('user_id')) :
             ?>
 
             <div class="card col-sm-5 offset-sm-2 col-md-6 offset-md-0">
@@ -20,14 +19,16 @@
                                     <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="name">Nom<span class="text-danger">*</span></label>
-                                                <input type="text" value="<?= get_input('name') ? get_input('name') : e($user->name)?>" data-parsley-trigger="change" class="form-control" name="name" id="name" placeholder="Nom" required='required'>
+                                                <input type="text" value="<?= get_input('name') ? get_input('name') : e($user->name)?>" 
+                                                data-parsley-trigger="change" class="form-control" name="name" id="name" placeholder="Nom" required='required'>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="city">Ville<span class="text-danger">*</span></label>
-                                                <input type="text" value="<?= get_input('city') ? get_input('city') : e($user->city)?>" data-parsley-trigger="change" class="form-control" name="city" id="city" placeholder="Nom" required='required'>
+                                                <input type="text" value="<?= get_input('city') ? get_input('city') : e($user->city)?>" 
+                                                data-parsley-trigger="change" class="form-control" name="city" id="city" placeholder="Nom" required='required'>
                                             </div>
                                         </div>
                                     </div>
@@ -36,7 +37,8 @@
                                     <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="country">Pays<span class="text-danger">*</span></label>
-                                                <input type="text" value="<?= get_input('country') ? get_input('country') : e($user->country)?>" data-parsley-trigger="change" class="form-control" name="country" id="country" placeholder="Nom" required='required'>
+                                                <input type="text" value="<?= get_input('country') ? get_input('country') : e($user->country)?>" 
+                                                data-parsley-trigger="change" class="form-control" name="country" id="country" placeholder="Nom" required='required'>
                                             </div>
                                         </div>
 
@@ -55,14 +57,16 @@
                                     <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="twitter">Twitter</label>
-                                                <input type="text" value="<?= get_input('twitter') ? get_input('twitter') : e($user->twitter)?>" data-parsley-trigger="change" class="form-control" name="twitter" id="twitter">
+                                                <input type="text" value="<?= get_input('twitter') ? get_input('twitter') : e($user->twitter)?>" 
+                                                data-parsley-trigger="change" class="form-control" name="twitter" id="twitter">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="github">Github</label>
-                                                <input type="text" value="<?= get_input('github') ? get_input('github') : e($user->github)?>" data-parsley-trigger="change" class="form-control" name="github" id="github">
+                                                <input type="text" value="<?= get_input('github') ? get_input('github') : e($user->github)?>" 
+                                                data-parsley-trigger="change" class="form-control" name="github" id="github">
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +83,8 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="bio">Bio<span class="text-danger">*</span></label>
-                                                <textarea type="text" rows="5" cols="10" data-parsley-trigger="change" class="form-control" name="bio" id="bio" placeholder="Raconte ta vie" required='required'><?= get_input('github') ? get_input('github') : e($user->bio)?></textarea>
+                                                <textarea type="text" rows="5" cols="10" data-parsley-trigger="change" class="form-control" name="bio"
+                                                id="bio" placeholder="Raconte ta vie" required='required'><?= get_input('bio') ? get_input('bio') : e($user->bio)?></textarea>
                                             </div>
                                         </div>
                                     </div>

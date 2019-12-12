@@ -7,6 +7,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
+     <ul class="nav navbarnav">
+      <li><a href="list_users.php">Liste des utilisateur</a></li>
+     </ul>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item <?= set_active('index') ?>">
           <a class="nav-link" href="index.php"><?= $menu['accueil'][$_SESSION['locale']]?> <span class="sr-only">(current)</span></a>
@@ -14,6 +17,9 @@
         <?php if(is_logged_in()): ?>
           <li class="nav-item <?= set_active('profile') ?>">
             <a class="nav-link" href="profile.php?id=<?= get_session('user_id')?>"><?= $menu['mon_profil'][$_SESSION['locale']]?></a>
+          </li>
+          <li class="nav-item <?= set_active('edit_user') ?>">
+              <a class="nav-link" href="edit_user.php?id=<?= get_session('user_id')?>"><?= $menu['editer_profil'][$_SESSION['locale']]?></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="logout.php?id=<?= get_session('user_id')?>"><?= $menu['deconnexion'][$_SESSION['locale']]?></a>

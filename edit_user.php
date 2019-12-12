@@ -20,14 +20,14 @@ if(!empty($_GET['id']) && $_GET['id'] === get_session('user_id')){
 if(isset($_POST['update'])){
 
     $errors = [];
-
+    
     if(not_empty(['name', 'city', 'sex', 'country', 'bio'])){
         extract($_POST);
 
         $q = $db->prepare("UPDATE users 
                             SET name = :name, city = :city, sex = :sex, country = :country, 
                             bio = :bio, twitter = :twitter, github = :github,
-                            available_for_hiring = :available_for_hiring; bio = :bio,
+                            available_for_hiring = :available_for_hiring, bio = :bio,
                             WHERE id = :id ");
                             
         

@@ -8,6 +8,18 @@ if(!function_exists('e')){
     }
 }
 
+if(!function_exists('redirect_intention')){
+    function redirect_intention($default_url){
+        if($_SESSION['forwarding_url']){
+            $url = $_SESSION['forwarding_url'];
+        }else {
+            $url = $default_url;
+        }
+        $_SESSION['forwarding_url'] = null;
+        redirect($url);
+    }
+}
+
 if(!function_exists('not_empty')){
     function not_empty($fields = []){
         if(count($fields) != 0){

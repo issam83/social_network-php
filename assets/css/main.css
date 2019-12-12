@@ -44,3 +44,25 @@ textarea.parsley-error {
 /*
  Parsley CSS 
  */
+
+ /*
+Liste utilisateurs
+ */
+
+.users{
+  margin-bottom: 3em;
+}
+
+.user-block{
+  text-align: center;
+}
+
+.user-block .avatar{
+  margin: auto;
+}
+
+ /*
+Liste utilisateurs
+ */
+
+

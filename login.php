@@ -16,7 +16,7 @@ if(isset($_POST['login'])){
 
         $q = $db->prepare("SELECT id, pseudo, password AS hashed_password, email FROM users 
                             WHERE (pseudo = :identifiant OR email = :identifiant)
-                            AND active = '1'");
+                            AND active = '0'");
         
         $q->execute([
             'identifiant' => $identifiant,
@@ -30,7 +30,7 @@ if(isset($_POST['login'])){
             $_SESSION['pseudo'] = $user->pseudo;
             $_SESSION['email'] = $user->email;
 
-            redirect('profile.php?id='.$user->id);
+            redirect_intention('profile.php?id='.$user->id);
         }else {
             set_flash('identifiant ou mot de passe incorrecte', 'danger');
             save_input_data();

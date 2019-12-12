@@ -15,9 +15,9 @@
     </title>
 
     <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/"> -->
-    <link rel='stylesheet' href='assets/css/main.css'>
+    <link rel='stylesheet' href='/assets/css/main.css'>
     <link rel='stylesheet' href='libraries/parsley.css'>
-    <!-- <link src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap core CSS -->
 <link href="assets/docs/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
